@@ -1,0 +1,146 @@
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .cart-container {
+        padding: 10px;
+    }
+    .cart-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cart-item span,
+    .cart-item button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .clear-cart-button,
+    .place-order-button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60vh;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Добавляем относительное позиционирование */
+}
+
+/* Контейнер для заголовка и кнопки */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.cart-title {
+    text-align: left;
+    font-size: 24px;
+    color: #333;
+    margin: 0; /* Убираем стандартные отступы */
+}
+
+.clear-cart-button {
+    padding: 10px 20px;
+    background-color: #744dff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.clear-cart-button:hover {
+    background-color: #1700e6;
+}
+
+.showcase-cart-container {
+    position: relative;
+    width: 95%;
+    height: 60vh;
+    overflow-y: auto;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+    scrollbar-width: none;
+
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10%;
+}
+
+.cart-item span {
+    font-size: 18px;
+    color: #333;
+}
+
+.cart-item button {
+    padding: 10px 20px;
+    background-color: #4000ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+    background-color: #4d00e6;
+}
+
+.place-order-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #614caf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.place-order-button:hover:not(:disabled) {
+    background-color: #6945a0;
+}
+
+.place-order-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Стили для пустой корзины */
+.cart-container p {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}

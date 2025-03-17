@@ -1,0 +1,95 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+    width: calc(40% - 32px); /* Ширина карточки */
+    height: 200px; /* Высота карточки */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center; /* Центрируем содержимое по вертикали */
+}
+
+/* Секция изображений */
+.image-section {
+    position: relative;
+    width: 40%; /* Ширина секции изображений */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.asteroid-image {
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.asteroid-image.small {
+    width: 35%;
+}
+
+.asteroid-image.medium {
+    width: 65%;
+}
+
+.asteroid-image.large {
+    width: 95%;
+}
+
+.dino-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%; /* Размер изображения динозавра */
+    height: auto;
+}
+
+/* Секция описания */
+.description-section {
+    width: 35%; /* Ширина секции описания */
+    padding: 0 16px; /* Отступы слева и справа */
+}
+
+.description-section h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+}
+
+.description-section p {
+    margin: 4px 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Секция кнопок */
+.button-section {
+    width: 25%; /* Ширина секции кнопок */
+    display: flex;
+    flex-direction: column; /* Кнопки в столбец */
+    gap: 10px; /* Отступ между кнопками */
+}
+
+.button-section button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.button-section button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.button-section button:not(:disabled) {
+    background-color: rgba(95, 46, 255, 0.85);
+    color: white;
+}
+
+.button-section button:not(:disabled):hover {
+    background-color: rgb(40, 3, 161);
+}
